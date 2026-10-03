@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenny Olanrewaju — Web Developer in Lagos</title>
+  <meta name="description" content="Kenny Olanrewaju designs and ships custom product websites from Lagos — shops, galleries, and brand pages with clear type, quiet motion, and careful finish." />
+  <meta name="author" content="Kenny Olanrewaju" />
+  <script>try{var p=localStorage.getItem("palette");if(p&&p!=="teal")document.documentElement.setAttribute("data-palette",p);}catch(e){}</script>
+  <meta name="theme-color" content="#070809" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f1eee6" media="(prefers-color-scheme: light)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kenny Olanrewaju — Web Developer" />
+  <meta name="twitter:description" content="Interfaces with a pulse. Custom product sites with clear type, quiet motion, and careful finish." />
+  <meta name="twitter:image" content="assets/og.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_NG" />
+  <meta property="og:site_name" content="Kenny Olanrewaju" />
+  <meta property="og:title" content="Kenny Olanrewaju — Web Developer" />
+  <meta property="og:description" content="Interfaces with a pulse. Custom product websites with clear type, quiet motion, and careful finish — from Lagos." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:alt" content="Kenny Olanrewaju — Web developer portfolio" />
+  <link rel="canonical" href="https://kenny-olanrewaju.github.io/" />
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <a href="#work" class="skip-link">Skip to work</a>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <span class="cursor-label"></span>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#top" class="logo" data-cursor="Home">KO</a>
+      <nav class="nav" id="primaryNav" aria-label="Primary">
+        <a href="#work" data-section="work" data-cursor="Projects">Projects</a>
+        <a href="#notes" data-section="notes" data-cursor="Notes">Notes</a>
+        <a href="#skills" data-section="skills" data-cursor="Stack">Stack</a>
+        <a href="#about" data-section="about" data-cursor="About">About</a>
+        <a href="#contact" data-section="contact" data-cursor="Contact">Contact</a>
+        <button type="button" class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" aria-label="Toggle theme">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+          <span class="theme-toggle-label">Theme</span>
+        </button>
+      </nav>
+      <div class="header-actions">
+        <div class="palette" id="palette">
+          <button type="button" class="palette-toggle" id="paletteToggle" aria-label="Choose colour palette" aria-haspopup="true" aria-expanded="false" aria-controls="paletteMenu" data-cursor="Colours">
+            <span class="palette-dot" aria-hidden="true"></span>
+          </button>
+          <div class="palette-menu" id="paletteMenu" role="group" aria-label="Colour palette" hidden>
+            <button type="button" class="palette-swatch" data-palette="teal" aria-label="Teal palette" aria-pressed="true" title="Teal" style="--sw-d: #8fd4c4; --sw-p: #1c6d61"></button>
+            <button type="button" class="palette-swatch" data-palette="ocean" aria-label="Ocean palette" aria-pressed="false" title="Ocean" style="--sw-d: #7eb6ff; --sw-p: #2b6cb0"></button>
+            <button type="button" class="palette-swatch" data-palette="violet" aria-label="Violet palette" aria-pressed="false" title="Violet" style="--sw-d: #b9a4ff; --sw-p: #6b4fd0"></button>
+            <button type="button" class="palette-swatch" data-palette="sunset" aria-label="Sunset palette" aria-pressed="false" title="Sunset" style="--sw-d: #ffb27a; --sw-p: #c4571d"></button>
+            <button type="button" class="palette-swatch" data-palette="rose" aria-label="Rose palette" aria-pressed="false" title="Rose" style="--sw-d: #ff9ecd; --sw-p: #c0407f"></button>
+          </div>
+        </div>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme" data-cursor="Theme">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+        </button>
+        <a href="#contact" class="btn btn-sm btn-primary hire-desktop" data-cursor="Hire">Hire me</a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="top" class="hero">
+      <canvas id="shimmer" class="hero-shimmer" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-meta reveal">
+          <span class="availability">
+            <span class="avail-dot"></span>
+            <span id="greeting">Open for freelance</span>
+          </span>
+          <time id="lagosTime" class="lagos-time">Lagos · WAT</time>
+        </div>
+
+        <p class="hero-eyebrow reveal">Kenny Olanrewaju · Web developer · Lagos</p>
+
+        <h1 class="hero-name">
+          <span class="name-mask"><span class="name-line">Crafting digital</span></span>
+          <span class="name-mask"><span class="name-line is-late">experiences through <span class="hero-code">code</span>.</span></span>
+        </h1>
+
+        <p class="hero-punch reveal delay-1">
+          Websites that turn browsers into customers.
+        </p>
+
+        <p class="hero-tagline reveal delay-2">
+          Hand-coded, mobile-first sites for brands, shops, galleries, restaurants, and real businesses — sharp, fast, and built to be used.
+        </p>
+
+        <div class="hero-cta reveal delay-3">
+          <a href="#work" class="btn btn-lg btn-primary" data-cursor="Work">
+            See the work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <a href="https://github.com/Kenny-Olanrewaju" target="_blank" rel="noopener" class="btn btn-lg btn-ghost" data-cursor="GitHub">
+            <svg class="github-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .7a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.23 1.84 1.23 1.07 1.84 2.8 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.82.58A12 12 0 0 0 12 .7Z"/></svg>
+            GitHub
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-meta-row reveal delay-4" aria-label="Quick facts">
+          <div class="meta-item">
+            <span class="meta-label">Live projects</span>
+            <span class="meta-value"><span data-count="5">0</span> shipped</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Based in</span>
+            <span class="meta-value">Lagos, Nigeria</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Currently</span>
+            <span class="meta-value">open for new work</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll reveal delay-5">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span><span>Motion</span>
+        <span>Accessibility</span><span>Git</span><span>UI Systems</span><span>Product Sites</span>
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span><span>Motion</span>
+        <span>Accessibility</span><span>Git</span><span>UI Systems</span><span>Product Sites</span>
+      </div>
+    </div>
+
+
+    <!-- Now band -->
+    <div class="now-band reveal">
+      <div class="now-inner">
+        <span class="now-label">Now</span>
+        <p>Open for freelance · Building product sites from Lagos · Prefer clear briefs and honest timelines</p>
+      </div>
+    </div>
+
+    <!-- ===================== WORK ===================== -->
+    <section id="work" class="work section">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-kicker">Selected work</p>
+          <h2 class="section-title">Sites that hold up<br/>in the wild.</h2>
+          <p class="section-lead">Real products. Real users. Quiet details that still matter after launch.</p>
+        </div>
+        <div class="filters" role="tablist" aria-label="Filter projects">
+          <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="commerce">Commerce</button>
+          <button type="button" class="filter-btn" data-filter="gallery">Gallery</button>
+          <button type="button" class="filter-btn" data-filter="brand">Brand</button>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+    <section id="testimonials" class="testimonials section">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-kicker">
+            <img class="kicker-icon" src="assets/svg/testimonials/quote-mark.svg" alt="" width="18" height="18" />
+            Testimonials
+          </p>
+          <h2 class="section-title">What collaborators say.</h2>
+        </div>
+      </div>
+      <div class="testimonials-track">
+        <article class="t-card reveal">
+          <p class="t-quote">“Kenny turned a rough brief into a storefront that felt considered and ready for real customers. He anticipated the awkward states — empty screens, focus, loading — and resolved them before they became issues.”</p>
+          <div class="t-meta">
+            <img class="t-avatar" src="assets/svg/testimonials/avatar-a.svg" alt="" width="40" height="40" />
+            <div>
+              <strong>Adaeze Okonkwo</strong>
+              <span>Product lead · retail pilot, Lagos</span>
+            </div>
+          </div>
+        </article>
+        <article class="t-card reveal delay-1">
+          <p class="t-quote">“Communication was clear and steady. The gallery remained composed even on a slow network — attention to performance and detail I don’t often see at this stage of a project.”</p>
+          <div class="t-meta">
+            <img class="t-avatar" src="assets/svg/testimonials/avatar-t.svg" alt="" width="40" height="40" />
+            <div>
+              <strong>Tunde Adebayo</strong>
+              <span>Founder · creative studio</span>
+            </div>
+          </div>
+        </article>
+        <article class="t-card reveal delay-2">
+          <p class="t-quote">“The site stayed warm without becoming busy. Custom cake orders started the week we launched. Kenny understood both the brand and the practical needs of running a bakery online.”</p>
+          <div class="t-meta">
+            <img class="t-avatar" src="assets/svg/testimonials/avatar-m.svg" alt="" width="40" height="40" />
+            <div>
+              <strong>Maryam Kareem</strong>
+              <span>Owner · Sweet Crumbs Bakery</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== NOTES ===================== -->
+    <section id="notes" class="notes section">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-kicker">Notes</p>
+          <h2 class="section-title">Things I’ve learned while building.</h2>
+          <p class="section-lead">Practical lessons from building real websites — from clear layouts and responsive design to the small details that make an interface easier to use.</p>
+        </div>
+      </div>
+      <div class="notes-grid">
+        <article class="note-card reveal" data-note="type">
+          <h3>Start with the words</h3>
+          <p>If the text is hard to read, nothing else on the page can save it. How I set hierarchy before colour or animation.</p>
+          <span class="note-link">Read note →</span>
+        </article>
+        <article class="note-card reveal delay-1" data-note="states">
+          <h3>Plan for the messy path</h3>
+          <p>Empty screens, slow loads, and errors are part of real use. Why those states deserve the same care as the happy path.</p>
+          <span class="note-link">Read note →</span>
+        </article>
+        <article class="note-card reveal delay-2" data-note="quiet">
+          <h3>Keep the interface calm</h3>
+          <p>One accent, real photos, motion only when it helps. How restraint makes a product easier to trust.</p>
+          <span class="note-link">Read note →</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATION ===================== -->
+    <section id="certification" class="certification section">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-kicker">Certification</p>
+          <h2 class="section-title">Certified in web development.</h2>
+          <p class="section-lead">Completed through Sololearn, with both theory and hands-on practice.</p>
+        </div>
+      </div>
+      <div class="cert-grid">
+        <button type="button" class="cert-frame reveal" data-open-cert data-cursor="View" aria-label="View the Web Development certificate full size">
+          <span class="cert-glow" aria-hidden="true"></span>
+          <span class="cert-paper">
+            <img src="web-development-certificate.jpg" alt="Course certificate showing that Kenny completed the Web Development course on Sololearn, issued 02 October 2026" width="1754" height="1238" loading="eager" decoding="async" />
+            <span class="cert-sheen" aria-hidden="true"></span>
+          </span>
+          <span class="cert-zoom" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+            View full size
+          </span>
+        </button>
+        <article class="cert-card reveal delay-1">
+          <div class="cert-top">
+            <span class="cert-check" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="14"/><path d="M9.5 16.5l4.5 4.5 8.5-9.5"/></svg>
+            </span>
+            <span class="cert-status">Course completed</span>
+          </div>
+          <h3>Web Development</h3>
+          <p class="cert-issuer">Course Certificate · Sololearn</p>
+          <div class="cert-year">
+            <span class="cert-year-num">2026</span>
+            <span class="cert-year-label">Year completed</span>
+          </div>
+          <dl class="cert-meta">
+            <div><dt>Issued</dt><dd>02 October 2026</dd></div>
+            <div><dt>Certificate ID</dt><dd>CC-HZUNPFUO</dd></div>
+          </dl>
+          <div class="cert-actions">
+            <button type="button" class="btn btn-sm btn-primary" data-open-cert data-cursor="View">View certificate</button>
+            <a class="btn btn-sm btn-ghost" href="web-development-certificate.jpg" download="Web-Development-Certificate.jpg" data-cursor="Download">Download</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section id="services" class="services section">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-kicker">Services</p>
+          <h2 class="section-title">What I ship.</h2>
+          <p class="section-lead">Custom websites built to look polished, work smoothly, and give visitors a clear path from first click to next step.</p>
+        </div>
+      </div>
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <span class="service-num">01</span>
+          <h3>Product websites</h3>
+          <p>Marketing and product pages that load fast, read clearly, and convert without the gimmicks.</p>
+          <ul>
+            <li>Landing & marketing sites</li>
+            <li>Brand and portfolio pages</li>
+            <li>Responsive systems from mobile up</li>
+          </ul>
+        </article>
+        <article class="service-card reveal delay-1">
+          <span class="service-num">02</span>
+          <h3>Commerce fronts</h3>
+          <p>Shops with honest product flows — cart, detail, offers — built to take real orders.</p>
+          <ul>
+            <li>Catalogue & product detail</li>
+            <li>Cart and checkout UX</li>
+            <li>Promos and countdown states</li>
+          </ul>
+        </article>
+        <article class="service-card reveal delay-2">
+          <span class="service-num">03</span>
+          <h3>Galleries & media</h3>
+          <p>Image-led interfaces where layout, rhythm, and hover teach looking — not clicking noise.</p>
+          <ul>
+            <li>Grid composition systems</li>
+            <li>Lightweight viewers</li>
+            <li>Download and save flows</li>
+          </ul>
+        </article>
+        <article class="service-card reveal delay-3">
+          <span class="service-num">04</span>
+          <h3>UI polish & systems</h3>
+          <p>Tokens, type scales, and the edge cases — empty, error, focus — that make a site feel complete.</p>
+          <ul>
+            <li>Design tokens & type scales</li>
+            <li>Quiet motion</li>
+            <li>Accessibility pass</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="skills section">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-kicker">Skills</p>
+          <h2 class="section-title">Stack.</h2>
+          <p class="section-lead">The core technologies I use to build responsive, interactive websites and turn designs into working experiences.</p>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card reveal" data-skill="95" data-name="HTML5">
+          <div class="skill-card-inner" tabindex="0" aria-label="HTML5: 95 percent. Click or tap to replay the animation.">
+            <span class="skill-gridbg" aria-hidden="true"></span>
+            <span class="skill-orb" aria-hidden="true"></span>
+            <div class="skill-head">
+              <span class="skill-badge" aria-hidden="true">&lt;/&gt;</span>
+              <span class="skill-index" aria-hidden="true">01 / 03</span>
+            </div>
+            <div class="skill-gauge" role="img" aria-label="HTML5 skill level: 95 percent">
+              <svg viewBox="0 0 200 200" aria-hidden="true">
+                <g class="skill-ticks"></g>
+                <circle class="skill-arc-track" cx="100" cy="100" r="66"></circle>
+                <circle class="skill-arc-glow" cx="100" cy="100" r="66"></circle>
+                <circle class="skill-arc" cx="100" cy="100" r="66"></circle>
+                <g class="skill-head-g">
+                  <circle class="skill-ping" cx="100" cy="34" r="6"></circle>
+                  <circle class="skill-head-dot" cx="100" cy="34" r="5.5"></circle>
+                </g>
+              </svg>
+              <div class="skill-percent" aria-hidden="true">
+                <span class="odo"><span class="odo-col" data-odo="tens"></span><span class="odo-col" data-odo="ones"></span></span><span class="skill-pct-sign">%</span>
+              </div>
+            </div>
+            <h3>HTML5</h3>
+            <p>Clean, well-structured pages that work for everyone, including people using screen readers.</p>
+            <div class="skill-terminal" aria-hidden="true">
+              <span class="skill-prompt">&gt;</span>
+              <span class="skill-type">&lt;main class="portfolio"&gt;</span><span class="skill-caret"></span>
+            </div>
+            <ul class="skill-tags">
+              <li>Semantic markup</li>
+              <li>Accessibility</li>
+              <li>SEO basics</li>
+            </ul>
+          </div>
+        </article>
+        <article class="skill-card reveal delay-1" data-skill="90" data-name="CSS3">
+          <div class="skill-card-inner" tabindex="0" aria-label="CSS3: 90 percent. Click or tap to replay the animation.">
+            <span class="skill-gridbg" aria-hidden="true"></span>
+            <span class="skill-orb" aria-hidden="true"></span>
+            <div class="skill-head">
+              <span class="skill-badge" aria-hidden="true">{ }</span>
+              <span class="skill-index" aria-hidden="true">02 / 03</span>
+            </div>
+            <div class="skill-gauge" role="img" aria-label="CSS3 skill level: 90 percent">
+              <svg viewBox="0 0 200 200" aria-hidden="true">
+                <g class="skill-ticks"></g>
+                <circle class="skill-arc-track" cx="100" cy="100" r="66"></circle>
+                <circle class="skill-arc-glow" cx="100" cy="100" r="66"></circle>
+                <circle class="skill-arc" cx="100" cy="100" r="66"></circle>
+                <g class="skill-head-g">
+                  <circle class="skill-ping" cx="100" cy="34" r="6"></circle>
+                  <circle class="skill-head-dot" cx="100" cy="34" r="5.5"></circle>
+                </g>
+              </svg>
+              <div class="skill-percent" aria-hidden="true">
+                <span class="odo"><span class="odo-col" data-odo="tens"></span><span class="odo-col" data-odo="ones"></span></span><span class="skill-pct-sign">%</span>
+              </div>
+            </div>
+            <h3>CSS3</h3>
+            <p>Layouts that look great on any screen, with smooth animation that helps rather than distracts.</p>
+            <div class="skill-terminal" aria-hidden="true">
+              <span class="skill-prompt">&gt;</span>
+              <span class="skill-type">grid-template-columns: repeat(3, 1fr);</span><span class="skill-caret"></span>
+            </div>
+            <ul class="skill-tags">
+              <li>Grid &amp; Flexbox</li>
+              <li>Animations</li>
+              <li>Responsive design</li>
+            </ul>
+          </div>
+        </article>
+        <article class="skill-card reveal delay-2" data-skill="85" data-name="JavaScript">
+          <div class="skill-card-inner" tabindex="0" aria-label="JavaScript: 85 percent. Click or tap to replay the animation.">
+            <span class="skill-gridbg" aria-hidden="true"></span>
+            <span class="skill-orb" aria-hidden="true"></span>
+            <div class="skill-head">
+              <span class="skill-badge" aria-hidden="true">JS</span>
+              <span class="skill-index" aria-hidden="true">03 / 03</span>
+            </div>
+            <div class="skill-gauge" role="img" aria-label="JavaScript skill level: 85 percent">
+              <svg viewBox="0 0 200 200" aria-hidden="true">
+                <g class="skill-ticks"></g>
+                <circle class="skill-arc-track" cx="100" cy="100" r="66"></circle>
+                <circle class="skill-arc-glow" cx="100" cy="100" r="66"></circle>
+                <circle class="skill-arc" cx="100" cy="100" r="66"></circle>
+                <g class="skill-head-g">
+                  <circle class="skill-ping" cx="100" cy="34" r="6"></circle>
+                  <circle class="skill-head-dot" cx="100" cy="34" r="5.5"></circle>
+                </g>
+              </svg>
+              <div class="skill-percent" aria-hidden="true">
+                <span class="odo"><span class="odo-col" data-odo="tens"></span><span class="odo-col" data-odo="ones"></span></span><span class="skill-pct-sign">%</span>
+              </div>
+            </div>
+            <h3>JavaScript</h3>
+            <p>Interactive features like carts, filters and galleries that feel quick and respond instantly.</p>
+            <div class="skill-terminal" aria-hidden="true">
+              <span class="skill-prompt">&gt;</span>
+              <span class="skill-type">cart.addItem(sneaker);</span><span class="skill-caret"></span>
+            </div>
+            <ul class="skill-tags">
+              <li>DOM &amp; events</li>
+              <li>Data fetching</li>
+              <li>Interactive UI</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section id="process" class="process section">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-kicker">Process</p>
+          <h2 class="section-title">How we work together.</h2>
+          <p class="section-lead">Four simple steps, so you always know what is happening and what comes next.</p>
+        </div>
+      </div>
+      <ol class="process-steps">
+        <li class="process-step reveal">
+          <span class="step-index">01</span>
+          <div>
+            <h3>Plan</h3>
+            <p>We talk about what your website needs to do, who will use it, and what a good result looks like. Nothing gets designed until this is clear.</p>
+          </div>
+        </li>
+        <li class="process-step reveal delay-1">
+          <span class="step-index">02</span>
+          <div>
+            <h3>Build</h3>
+            <p>I build the site for phones first, then make sure it looks great on tablets and computers too.</p>
+          </div>
+        </li>
+        <li class="process-step reveal delay-2">
+          <span class="step-index">03</span>
+          <div>
+            <h3>Polish</h3>
+            <p>I check the small details, like pages with no content yet, error messages and keyboard use. Animation is only added where it actually helps.</p>
+          </div>
+        </li>
+        <li class="process-step reveal delay-3">
+          <span class="step-index">04</span>
+          <div>
+            <h3>Launch</h3>
+            <p>Your site goes live with clean, tidy code, so any changes you want later are quick and easy.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="about section">
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <p class="section-kicker">About</p>
+          <h2 class="section-title">Built in Lagos.<br/>Shipped for the web.</h2>
+          <p class="about-lead">
+            I care about the quiet details that make a site feel finished —
+            type that reads, motion that explains, and interfaces that still work
+            when the network is slow and the light is bad.
+          </p>
+          <p class="about-body">
+            Most of my work sits between commerce, galleries, brand sites, and personal websites.
+            I start with structure and type, then stay with the details — focus, empty states,
+            loading, errors — until the product feels steady in someone’s hands.
+          </p>
+          <div class="about-photo">
+            <img src="kenny-about.jpg" alt="Kenny Olanrewaju — abstract portrait" width="420" height="520" loading="lazy" />
+            <div class="photo-frame"></div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="stack-block reveal">
+            <h3>Stack</h3>
+            <ul class="stack-list">
+              <li><strong>HTML</strong><span>Clear structure first — so the page makes sense to people and machines.</span></li>
+              <li><strong>CSS</strong><span>Layout, type, and colour systems that stay consistent under pressure.</span></li>
+              <li><strong>JavaScript</strong><span>Interaction where it helps; never complexity for its own sake.</span></li>
+            </ul>
+          </div>
+
+          <div class="craft-block reveal">
+            <h3>Craft</h3>
+            <ul class="craft-list">
+              <li>
+                <strong>Responsive UI</strong>
+                <span>Mobile is the default canvas. Desktop gets more room, not a different product.</span>
+              </li>
+              <li>
+                <strong>Motion</strong>
+                <span>Short, interruptible, quiet. Transform and opacity — never carnival.</span>
+              </li>
+              <li>
+                <strong>Accessibility</strong>
+                <span>Focus, contrast, names, and keyboards. Craft you can feel with your eyes closed.</span>
+              </li>
+              <li>
+                <strong>UI systems</strong>
+                <span>Tokens, type scales, and components that stay consistent under pressure.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="principles-block reveal">
+            <h3>Principles</h3>
+            <div class="principles">
+              <article>
+                <span class="principle-num">01</span>
+                <h4>Type leads</h4>
+                <p>If the words don’t read well, colour and motion are just noise.</p>
+              </article>
+              <article>
+                <span class="principle-num">02</span>
+                <h4>Finish the edges</h4>
+                <p>Empty, error, focus, loading — the states people notice when something goes wrong.</p>
+              </article>
+              <article>
+                <span class="principle-num">03</span>
+                <h4>Prefer quiet</h4>
+                <p>One accent, real images, motion that explains then steps aside.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq" class="faq section">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-kicker">FAQ</p>
+          <h2 class="section-title">Straight answers.</h2>
+        </div>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>What kind of projects do you take?</summary>
+          <p>Personal and business sites built custom — product pages, shops, galleries, and brand sites. I focus on made-to-fit work, not generic templates.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you work on existing websites?</summary>
+          <p>Yes — as long as they’re custom-built (not locked template platforms). I can improve, extend, or rebuild sections of an existing codebase when the structure is open enough to work in.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What’s your stack?</summary>
+          <p>HTML, CSS, and JavaScript day to day. I keep the stack lean so sites stay fast and easy to maintain.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do we start?</summary>
+          <p>Send a short note with the goal, timeline, and any links or references, and I’ll take it from there.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="contact section">
+      <div class="contact-inner reveal">
+        <p class="section-kicker">Contact</p>
+        <h2 class="section-title">Let’s make something<br/>that lasts.</h2>
+        <p class="contact-lead">
+          Have a project in mind? Get in touch and let’s discuss your goals, ideas, and how I can turn them into a polished website built around your needs.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:kennycool202421@gmail.com" class="btn btn-lg btn-primary" id="emailBtn" data-cursor="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+            Email
+          </a>
+          <a href="https://wa.me/2349049357967" target="_blank" rel="noopener" class="btn btn-lg btn-whatsapp" id="whatsappBtn" data-cursor="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.34 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.75 14.16c-.24.68-1.4 1.25-1.94 1.33-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.26-4.79-4.2-4.93-4.39-.14-.19-1.16-1.54-1.16-2.94s.73-2.08 1-2.24c.24-.15.53-.19.71-.19h.51c.16 0 .38-.06.59.45.24.58.81 2 .88 2.14.07.15.12.32.02.51-.1.19-.15.32-.3.49-.15.17-.31.37-.44.5-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.07 1.31 2.36 1.46.3.15.47.12.64-.07.17-.19.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.34.08.13.08.74-.16 1.42z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://github.com/Kenny-Olanrewaju" target="_blank" rel="noopener" class="btn btn-lg btn-ghost" data-cursor="GitHub">
+            <svg class="github-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .7a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.23 1.84 1.23 1.07 1.84 2.8 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.82.58A12 12 0 0 0 12 .7Z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-logo">KO</p>
+        <p class="footer-meta">Frontend developer · Lagos</p>
+        <p class="footer-copy">© <span id="year"></span> Kenny Olanrewaju. Built in Lagos with care.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#work">Projects</a>
+        <a href="#notes">Notes</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Note Modal -->
+  <div class="modal note-modal" id="noteModal" hidden>
+    <div class="modal-backdrop" data-close-note></div>
+    <div class="modal-panel note-panel" role="dialog" aria-modal="true" aria-labelledby="noteTitle">
+      <button type="button" class="modal-close" data-close-note aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-body note-body" id="noteContent"></div>
+    </div>
+  </div>
+
+  <!-- Certificate lightbox -->
+  <div class="modal cert-modal" id="certModal" hidden>
+    <div class="modal-backdrop" data-close-cert></div>
+    <div class="modal-panel cert-panel" role="dialog" aria-modal="true" aria-label="Web Development certificate">
+      <button type="button" class="modal-close" data-close-cert aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <img src="web-development-certificate.jpg" alt="Course certificate showing that Kenny completed the Web Development course on Sololearn, issued 02 October 2026" />
+    </div>
+  </div>
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" data-close aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <button type="button" class="back-top" id="backTop" aria-label="Back to top" hidden>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
