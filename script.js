@@ -123,6 +123,30 @@ const PROJECTS = [
     cover: "assets/projects/romeos-kicks-cover.jpg",
     span: "span-3",
   },
+  {
+    slug: "lakeshole-ventures",
+    title: "Lakeshole Ventures",
+    kicker: "Wellness commerce",
+    year: "2026",
+    blurb: "Miira wellness coffees and supplements — order via WhatsApp.",
+    description:
+      "Lakeshole Ventures is the storefront for authentic Miira wellness products in Nigeria: premium coffees, beauty and nutrition sachets from Revoobit. Colour-coded ranges, local saves, a working cart, and one-tap WhatsApp checkout so customers can browse and order without accounts or forms.",
+    highlights: [
+      "Eight Miira products across coffees, wellness, and beauty",
+      "Colour-coded ranges and local saved list",
+      "Cart that sends the order straight to WhatsApp",
+    ],
+    problem:
+      "Wellness suppliers often rely on Instagram DMs and scattered price lists. Customers needed a clear place to compare Miira products, understand what each sachet is for, and place an order without jumping through forms or creating an account.",
+    solution:
+      "A focused product site with filterable ranges, honest pricing in Naira, device-local saves, and a cart that builds a WhatsApp message automatically. The path is short: pick products, send the order, confirm delivery — nationwide.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    filters: ["commerce", "brand"],
+    href: "https://lakeshole-ventures.onrender.com/",
+    repo: "https://github.com/Kenny-Olanrewaju/Lakeshole-Ventures",
+    cover: "lakeshole-cover.jpg",
+    span: "span-3",
+  },
 ];
 
 /* ---------- Theme ---------- */
